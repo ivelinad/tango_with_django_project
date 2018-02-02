@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-
-{% load staticfiles %} 
-
+{% load static %} <!-- New line -->
 <html>
-	<head>
-		<title>About</title>
-	</head>
 
-	<body>
-		<h1>This tutorial has been put together by Ivelina Doynova</h1>
-		<div>
-			hey there partner! <br />
-			<strong>{{ boldmessage }}</strong><br />
-		</div>
+    <head>
+        <title>Rango</title>
+    </head>
+   
+    <body>
+        <h1> Rango says here is the about page!...</h1>
+        <div>
+           here is the about page! <br />
+           <strong>{{ boldmessage }}</strong> <br />
+        </div>
+        <div>
+            <a href="/rango/">Index</a> <br />
+            <img src="{% static "images/about.jpg" %}"
+                 alt="Picture of about"/>  <!-- New line -->
+        </div>
+        <div>
+            
+            <img src="{{ MEDIA_URL}}cat.jpg" /> 
+        </div>
+    </body>
 
-		<div>
-			<a href="/rango/">Index</a><br />
-			<img src="{% static "images/about.jpg" %}"
-				alt="About picture" /> 
-			<img />  <img src="{{ MEDIA_URL}}cat.jpg" />
-		</div>
-	</body>
 
 </html>
