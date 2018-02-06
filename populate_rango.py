@@ -6,7 +6,12 @@ import django
 django.setup()
 from rango.models import Category, Page
 
+def clear_all():
+	Category.objects.all().delete()
+	Page.objects.all().delete()
+
 def populate():
+	clear_all()
 	python_pages=[
 	{"title":"Official Python Tutorial",
 	"url":"http://docs.python.org/2/tutorial/", "views": 16},
